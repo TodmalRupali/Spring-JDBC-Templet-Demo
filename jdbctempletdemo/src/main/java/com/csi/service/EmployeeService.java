@@ -3,6 +3,7 @@ package com.csi.service;
 import com.csi.model.Employee;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface EmployeeService {
 
@@ -10,7 +11,7 @@ public interface EmployeeService {
 
     public boolean signIn(String empEmail , String empPass);
 
-    public Employee update(Employee employee);
+    public Employee update(int empId,Employee employee);
 
     public Employee getDataById(int empId);
 
@@ -36,7 +37,7 @@ public interface EmployeeService {
 
     public boolean loanEligibility(String input);
 
-    public Employee fetchsecondlargestsalary();
+    public Optional<Employee> fetchsecondlargestsalary();
 
     public  void deleteById(int empId);
 
